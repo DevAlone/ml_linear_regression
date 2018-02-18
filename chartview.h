@@ -15,6 +15,7 @@ signals:
 
 public slots:
     void resetZoom();
+    void resetDataset();
 
     // QWidget interface
 protected:

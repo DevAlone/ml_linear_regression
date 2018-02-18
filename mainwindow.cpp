@@ -10,6 +10,9 @@ MainWindow::MainWindow(QWidget* parent)
     connect(
         ui->resetZoomButton, &QPushButton::clicked,
         ui->chartView, &ChartView::resetZoom);
+    connect(
+        ui->resetDatasetButton, &QPushButton::clicked,
+        ui->chartView, &ChartView::resetDataset);
 }
 
 MainWindow::~MainWindow()

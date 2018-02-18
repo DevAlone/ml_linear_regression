@@ -27,7 +27,7 @@ ChartView::ChartView(QWidget* parent)
     chart()->addSeries(series);
     chart()->addSeries(series2);
 
-    chart()->setTitle("Linear regression example(Just click to add point)");
+    chart()->setTitle("Linear regression example(Just click to add point or scroll to zoom)");
     chart()->createDefaultAxes();
     chart()->setDropShadowEnabled(false);
 
@@ -37,6 +37,13 @@ ChartView::ChartView(QWidget* parent)
 void ChartView::resetZoom()
 {
     chart()->zoomReset();
+}
+
+void ChartView::resetDataset()
+{
+    points.clear();
+    series->clear();
+    series2->clear();
 }
 
 void ChartView::wheelEvent(QWheelEvent* event)
